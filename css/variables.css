@@ -1,0 +1,16 @@
+:root {
+  --font-1: 600 2.25rem/43.88px "Montserrat", sans-serif;
+  --font-2: 600 1.125rem/21.94px "Montserrat", sans-serif;
+  --font-3: 600 1rem/19.5px "Montserrat", sans-serif;
+  --font-4: 600 0.875rem/17.07px "Montserrat", sans-serif;
+  --font-5: 600 0.75rem/14.63px "Montserrat", sans-serif;
+  --gray-0: #4e5150;
+  --gray-1: #333333;
+  --gray-2: #4f4f4f;
+  --gray-3: #828282;
+  --gray-4: #bdbdbd;
+  --gray-5: #e0e0e0;
+  --gray-6: #f2f2f2;
+  --w: #ffffff;
+  --orange: #f2994a;
+}
