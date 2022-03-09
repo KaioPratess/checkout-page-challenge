@@ -15,6 +15,8 @@
   <!-- css links -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -31,9 +33,9 @@
           <span>$94.99</span>
         </div>
         <div class="counter">
-          <span>–</span>
-          <p class="counter-n">1</p>
-          <span>+</span>
+          <span class="decrease">–</span>
+          <p class="counter-n" disabled>0</p>
+          <span class="increase">+</span>
         </div>
       </div>
 
@@ -47,9 +49,9 @@
           <span>$124.99</span>
         </div>
         <div class="counter">
-          <span>−</span>
-          <p class="counter-n">1</p>
-          <span>+</span>
+          <span class="decrease">−</span>
+          <p class="counter-n" disabled>0</p>
+          <span class="increase">+</span>
         </div>
       </div>
       <div class="shipping">
@@ -67,31 +69,29 @@
       <form action="/">
         <div class="email">
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email...">
+          <input type="email" id="email" name="email" placeholder="Enter your email..." required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
         </div>
         <div class="phone">
           <label for="phone">Phone</label>
-          <input type="number" id="phone" name="phone" placeholder="Enter your phone...">
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone..." required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
         </div>
-      </form>
-      <h2>Shipping address</h2>
-      <form action="/">
+        <h2>Shipping address</h2>
         <div class="name">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Rodney Cotton">
+          <input type="text" id="name" name="name" placeholder="Rodney Cotton" required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
         </div>
         <div class="address">
           <label for="address">Address</label>
-          <input type="text" id="address" name="address" placeholder="Your Address..">
+          <input type="text" id="address" name="address" placeholder="Your Address.." required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
         </div>
         <div class="city">
           <label for="city">City</label>
-          <input type="text" id="city" name="city" placeholder="Your City..">
+          <input type="text" id="city" name="city" placeholder="Your City.." required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
         </div>
         <div class="country-postal-container">
           <div class="country">
             <label for="country">Country</label>
-            <select name="country" id="country">
+            <select name="country" id="country" required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
               <option value="" disabled selected>Your Country..</option>
               <option value="brazil">Brazil</option>
               <option value="unitedstates">United States</option>
@@ -100,22 +100,24 @@
           </div>
           <div class="postal-code">
             <label for="postal-code">Postal Code</label>
-            <input type="text" id="postal-code" name="postal-code" placeholder="Your postal code..">
+            <input type="text" id="postal-code" name="postal-code" placeholder="Your postal code.." required oninvalid="this.setCustomValidity('Required Field')" onchange="try{setCustomValidity('')}catch(e){}">
           </div>
         </div>
         <div class="save-info">
           <input type="checkbox" id="save" name="save">
           <label for="save">Save this information for next time</label>
         </div>
+        <div class="botao">
+          <button class="btn">Continue</button>
+        </div>
       </form>
-      <div class="botao">
-        <button class="btn">Continue</button>
-      </div>
     </div>
   </section>
   <footer class="footer">
     <p>created by <b>KaioPratess</b> - devChallenges.io</p>
   </footer>
 </body>
+
+<script src="js/scritpt.js"></script>
 
 </html>
